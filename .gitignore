@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Database
+*.sqlite
+data.sqlite
+
+# Cache
+.cache/
+modules/commands/cache/
+
+# Sensitive data
+ARIF-PROJECT.json
+ARIF-LOGACC.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Replit
+.local/
