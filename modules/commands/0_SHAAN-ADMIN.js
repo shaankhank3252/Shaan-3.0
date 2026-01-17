@@ -10,7 +10,7 @@ module.exports.config = {
   name: "admin",
   version: "2.0.0",
   hasPermssion: 0,
-  credits: "ARIF BABU",
+  credits: "SHAAN",
   description: "Admin & Bot Control System",
   commandCategory: "Admin",
   usages: "admin [list/add/remove/addndh/removendh/only/qtvonly/ndhonly/ibonly]",
