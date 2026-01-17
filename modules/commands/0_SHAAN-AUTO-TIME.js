@@ -6,7 +6,7 @@ module.exports.config = {
     name: "autosent",
     version: "12.0.0",
     hasPermssion: 0,
-    credits: "ARIF BABU",
+    credits: "SHAAN",
     description: "Auto Time Message With Date & Time",
     commandCategory: "group messenger",
     usages: "[]",
@@ -43,7 +43,7 @@ const messages = [
 
 // 🧠 MESSAGE FORMAT
 function buildMessage(time, text) {
-    const now = moment().tz("Asia/Kolkata");
+    const now = moment().tz("Asia/Karachi");
 
     return `
 ✦••┈┈┈┈┈┈┈ ✧ ┈┈┈┈┈┈┈••✦
@@ -56,7 +56,7 @@ function buildMessage(time, text) {
 ${text}
 
 ━━━━━━━━━━━━━━━
-MADE BY ❤️‍🔥 ARIF BABU`;
+MADE BY ❤️‍🔥 SHAAN KHAN`;
 }
 
 module.exports.onLoad = ({ api }) => {
@@ -74,7 +74,7 @@ module.exports.onLoad = ({ api }) => {
         if (period === "AM" && hour === "12") hour24 = 0;
 
         schedule.scheduleJob(
-            { hour: hour24, minute: parseInt(minute), tz: "Asia/Kolkata" },
+            { hour: hour24, minute: parseInt(minute), tz: "Asia/Karachi" },
             () => {
                 const msg = buildMessage(time, text);
 
