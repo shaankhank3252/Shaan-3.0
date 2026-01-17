@@ -2,7 +2,7 @@ module.exports.config = {
   name: "joinNoti",
   eventType: ["log:subscribe"],
   version: "2.1.0",
-  credits: "ARIF BABU",
+  credits: "SHAAN KHAN",
   description: "Join notification with Imgur image",
   dependencies: {
     "fs-extra": "",
@@ -17,17 +17,17 @@ module.exports.run = async function ({ api, event }) {
     const { threadID, logMessageData } = event;
 
     const time = new Date().toLocaleString("en-IN", {
-      timeZone: "Asia/Kolkata"
+      timeZone: "Asia/Karachi"
     });
 
-    const botName = global.config.BOTNAME || "ARIF BABU BOT";
+    const botName = global.config.BOTNAME || "SHAAN KHAN BOT";
 
     /* 🖼️ IMGUR LINKS */
     const imgurLinks = [
-      "https://i.imgur.com/AI8zow3.jpg",
-      "https://i.imgur.com/0grK57V.jpg",
-      "https://i.imgur.com/AI8zow3.jpg",
-      "https://i.imgur.com/0grK57V.jpg"
+      "https://i.imgur.com/6HgBENo.jpeg",
+      "https://i.imgur.com/rnxdWTt.jpeg",
+      "https://i.imgur.com/rnxdWTt.jpeg",
+     "https://i.imgur.com/Ux2eSA2.jpeg"
     ];
 
     const imgPath = __dirname + "/cache/join.jpg";
@@ -58,8 +58,8 @@ module.exports.run = async function ({ api, event }) {
 ┃ ⏰ Time    : ${time}
 ┗━━━━━━━━━━━━━━━┛
 
-Owner : MR ARIF BABU ❤️
-Type #help`,
+Owner : MR SHAAN KHAN ❤️
+Type .help`,
               attachment: fs.createReadStream(imgPath)
             },
             threadID,
@@ -95,7 +95,7 @@ Type #help`,
 ┃ ⏰ Time   : ${time}
 ┗━━━━━━━━━━━━━━━┛
 
-Enjoy your stay 💖`,
+ENJOY KARO BOT💖`,
               attachment: fs.createReadStream(imgPath),
               mentions: [{ tag: name, id: userID }]
             },
