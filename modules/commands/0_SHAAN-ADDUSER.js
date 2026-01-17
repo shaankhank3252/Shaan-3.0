@@ -2,7 +2,7 @@ module.exports.config = {
   name: "add",
   version: "2.5.1",
   hasPermssion: 2,
-  credits: "ARIF BABU",
+  credits: "SHAAN",
   description: "Add user to group by UID, link or reply (even if they left)",
   commandCategory: "group",
   usages: "add [uid/link] or reply with 'add'",
