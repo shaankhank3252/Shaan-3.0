@@ -7,7 +7,7 @@ module.exports.config = {
   name: "adbot",
   version: "2.1.0",
   hasPermssion: 0,
-  credits: "ARIF BABU",
+  credits: "SHAAN BABU",
   description: "Advanced Info Command",
   commandCategory: "info",
   usages: "[user | user @tag | user uid | box | admin]",
