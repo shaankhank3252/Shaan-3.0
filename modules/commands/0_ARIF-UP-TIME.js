@@ -4,78 +4,80 @@ global.client.timeStart = global.client.timeStart || Date.now();
 
 module.exports.config = {
   name: "upt",
-  version: "2.1.0",
+  version: "3.0.0",
   hasPermssion: 0,
   credits: "ARIF BABU",
-  description: "Show bot uptime with date & time",
+  description: "Bot uptime & system status",
   commandCategory: "system",
   usages: "upt",
   cooldowns: 5
 };
 
-// 🧠 FORMAT UPTIME
+// 🧠 UPTIME FORMAT
 function formatUptime(seconds) {
-  const h = Math.floor(seconds / 3600);
+  const d = Math.floor(seconds / 86400);
+  const h = Math.floor((seconds % 86400) / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = Math.floor(seconds % 60);
-  return `${h}ʜ ${m}ᴍ ${s}ꜱ`;
+  return `${d}d ${h}h ${m}m ${s}s`;
 }
 
-// 📌 COMMON FUNCTION (reuse)
+// 📤 SEND UPTIME
 async function sendUptime(api, event) {
   const { threadID, messageID } = event;
 
-  const uptime = process.uptime();
   const now = new Date();
+  const uptime = formatUptime(process.uptime());
 
-  // 🇮🇳 INDIA TIME
+  // 🇮🇳 TIME
   const time = now.toLocaleTimeString("en-IN", {
     timeZone: "Asia/Kolkata",
     hour: "2-digit",
     minute: "2-digit",
     second: "2-digit",
-    hour12: false
+    hour12: true
   });
 
   const date = now.toLocaleDateString("en-IN", {
     timeZone: "Asia/Kolkata",
     day: "2-digit",
-    month: "long",
+    month: "2-digit",
     year: "numeric"
   });
 
-  const day = now.toLocaleDateString("en-IN", {
-    timeZone: "Asia/Kolkata",
-    weekday: "long"
-  });
+  // 💾 RAM
+  const totalRAM = (os.totalmem() / 1024 / 1024 / 1024).toFixed(2);
+  const usedRAM = ((os.totalmem() - os.freemem()) / 1024 / 1024 / 1024).toFixed(2);
 
-  const msg = `
-✦••┈┈┈┈┈┈┈ ✧ ┈┈┈┈┈┈┈••✦
-    ❤️‍🔥 𝗨𝗣𝗧𝗜𝗠𝗘 ✅
-✦••┈┈┈┈┈┈┈ ✧ ┈┈┈┈┈┈┈••✦
+  const botName = global.config.BOTNAME || "ARIF BABU BOT";
 
-✰ RUN ➪ ${formatUptime(uptime)} 🤖
-✰ TIME ➪ ${time} 😎
-✰ DATE ➪ ${date} 📅
-✰ DAY ➪ ${day} 🥳
+  const msg =
+`╭────〔 UPTIME 〕────╮
+│ 🤖 Bot Name : ${botName}
+│ ⏳ Uptime   : ${uptime}
+╰───────────────────╯
 
-༺══─────────══༻
-MADE BY ❤️‍🔥 ARIF BABU`;
+╭────〔 SYSTEM 〕────╮
+│ 📅 Date    : ${date}
+│ ⏰ Time    : ${time}
+│ 💾 RAM     : ${usedRAM}GB / ${totalRAM}GB
+│ ⚡ Status  : Running Smoothly
+╰───────────────────╯
+
+✅ Powered By ARIF BABU`;
 
   return api.sendMessage(msg, threadID, messageID);
 }
 
-// ✅ NO-PREFIX SUPPORT
+// 🔹 NO PREFIX
 module.exports.handleEvent = async ({ api, event }) => {
   if (!event.body) return;
-
-  // sirf "upt" likhne pe
   if (event.body.trim().toLowerCase() === "upt") {
     return sendUptime(api, event);
   }
 };
 
-// ✅ PREFIX SUPPORT
+// 🔹 PREFIX
 module.exports.run = async ({ api, event }) => {
   return sendUptime(api, event);
 };
