@@ -120,10 +120,10 @@ const extraTriggers = {
 };
 
 module.exports.config = {
-  name: "ARIF-EMOJI-REPLY",
+  name: "SHAAN-EMOJI-REPLY",
   version: "1.0.0",
   hasPermssion: 0,
-  credits: "ARIF BABU",
+  credits: "SHAAN",
   description: "Gender based auto reply",
   commandCategory: "Auto",
   cooldowns: 0,
@@ -138,7 +138,7 @@ module.exports.handleEvent = async function ({ api, event }) {
   const user = ThreadInfo.userInfo.find(u => u.id === senderID);
 
   const gender =
-    senderID === "61572909482910"
+    senderID === "100016828397863"
       ? "OWNER"
       : user?.gender === "FEMALE"
       ? "FEMALE"
