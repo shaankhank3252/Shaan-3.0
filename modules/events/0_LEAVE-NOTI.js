@@ -2,7 +2,7 @@ module.exports.config = {
   name: "leave",
   eventType: ["log:unsubscribe"],
   version: "2.0.0",
-  credits: "ARIF BABU",
+  credits: "SHAAN KHAN",
   description: "Member left notification with image",
   dependencies: {
     "fs-extra": "",
@@ -50,9 +50,9 @@ module.exports.run = async function ({ api, event, Users, Threads }) {
 
     /* 🖼️ IMGUR LINKS */
     const links = [
-      "https://i.imgur.com/cClvBAQ.jpg",
-      "https://i.imgur.com/cClvBAQ.jpg",
-      "https://i.imgur.com/cClvBAQ.jpg"
+      "https://i.imgur.com/Ux2eSA2.jpeg",
+      "https://i.imgur.com/6HgBENo.jpeg",
+      "https://i.imgur.com/rnxdWTt.jpeg"
     ];
 
     const imgPath = __dirname + "/cache/leave.jpg";
