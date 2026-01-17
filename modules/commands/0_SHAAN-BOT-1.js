@@ -12,7 +12,7 @@ function protectCredits(config) {
 }
 
 module.exports.config = {
-  name: "ARIF-AI",
+  name: "SHAAN-AI",
   version: "3.3.1",
   hasPermssion: 0,
   credits: "ARIF-BABU",
@@ -31,7 +31,7 @@ const OPENROUTER_API_KEY = "sk-or-v1-8be13f619838d1f97326c335fb7455b7cc03ac88197
 /* 🧠 SYSTEM PROMPT */
 const systemPrompt = `
 Tum Arif Babu AI ho 🙂
-Creator & Owner: Arif Babu ❤️
+Creator & Owner: Shaan Khan ❤️
 
 Golden Rules (kabhi mat todna):
 • User kisi bhi language (Hindi, English, Urdu, Roman, etc.), style ya mood mein bole — reply hamesha usi language mein dena.
@@ -51,7 +51,7 @@ Golden Rules (kabhi mat todna):
 `;
 
 /* 📁 DATA PATHS */
-const DATA_DIR = path.join(__dirname, "ARIF-BABU");
+const DATA_DIR = path.join(__dirname, "SHAAN-KHAN");
 const HISTORY_FILE = path.join(DATA_DIR, "ai_history.json");
 const BOT_REPLY_FILE = path.join(DATA_DIR, "bot-reply.json");
 
