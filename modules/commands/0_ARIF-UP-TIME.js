@@ -72,7 +72,7 @@ async function sendUptime(api, event) {
 // 🔹 NO PREFIX
 module.exports.handleEvent = async ({ api, event }) => {
   if (!event.body) return;
-  if (event.body.trim().toLowerCase() === "upt") {
+  if (event.body.trim().toLowerCase() === "ꜛ") {
     return sendUptime(api, event);
   }
 };
