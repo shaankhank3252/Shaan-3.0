@@ -14,18 +14,18 @@
   "UPTIME": 0,
 
   "FACEBOOK_ADMIN": ["ARIF-BABU-PROJECT"],
-  "ADMIN_NAME": ["ARIF-BABU"],
-  "BOTNAME": ["𝐀𝐫𝐢𝐟 𝐛𝐚𝐛𝐮 ᥫ᭡🎀"],
-  "PREFIX": "#",
+  "ADMIN_NAME": ["SHAAN-BABU"],
+  "BOTNAME": ["𝐁𝐎𝐓 𝐉𝐀𝐍𝐔 ᥫ᭡🎀"],
+  "PREFIX": ".",
 
   "ADMINBOT": [
-    "61572909482910",
-    "61578229796838"
+    "100016828397863",
+    "100016828397863"
   ],
 
   "NDH": [
-    "61572909482910",
-    "61578229796838"
+    "100016828397863",
+    "100016828397863"
   ],
 
   "DATABASE": {
@@ -36,10 +36,10 @@
 
   "DESIGN": {
     "Theme": "Blue",
-    "Admin": "ARIF BABU"
+    "Admin": "SHAAN BABU"
   },
 
-  "APPSTATEPATH": "ARIF-PROJECT.json",
+  "APPSTATEPATH": "Appstate.json",
   "NPM_FCA": "./fca-maria",
 
   "version": "4.6.9",
