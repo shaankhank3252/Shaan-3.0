@@ -2,7 +2,7 @@ this.config = {
   name: 'autoseen',
   version: '1.0.0',
   hasPermssion: 3,
-  credits: 'ARIF BABU',
+  credits: 'SHAAN',
   description: 'Bật/tắt tự động seen khi có tin nhắn mới',
   commandCategory: 'Admin',
   usages: 'on/off',
